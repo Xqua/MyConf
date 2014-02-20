@@ -1,0 +1,14 @@
+selectp -t 0              # Select pane 0
+splitw -v -p 85 	  # Split pane 0 vertically by 50%
+selectp -t 0              # Select pane 0
+splitw -h -p 13
+selectp -t 0              # Select pane 0
+splitw -h -p 38 
+selectp -t 3              # Select pane 1
+splitw -h -p 30           # Split pane 1 horizontally by 25%
+splitw -v -p 50 
+send-keys -t "2" C-z 'tty-clock' Enter
+send-keys -t "5" C-z 'htop -u lblondel' Enter
+send-keys -t "4" C-z 'ipython' Enter
+send-keys -t "3" C-z 'vim' Enter
+send-keys -t "1" C-z 'while true; do cdf ; sleep 10; clear ; done; ' Enter

@@ -1,0 +1,19 @@
+selectp -t 1              # Select pane 0
+splitw -v -p 85 	  # Split pane 0 vertically by 50%
+selectp -t 1              # Select pane 0
+splitw -h -p 15
+selectp -t 1              # Select pane 0
+splitw -h -p 45 
+selectp -t 4              # Select pane 1
+splitw -h -p 33           # Split pane 1 horizontally by 25%
+splitw -v -p 50
+ 
+send-keys -t "3" C-z 'tty-clock' Enter
+send-keys -t "6" C-z 'htop' Enter
+send-keys -t "5" C-z 'ipython' Enter
+send-keys -t "4" C-z 'vim' Enter
+send-keys -t "2" C-z 'while true; do cdf | grep /dev/sd ; sleep 10; clear ; done; ' Enter
+selectp -t 2
+splitw -v -p 50
+#send-keys -t "3" C-z 'while true; do weather KBOS | awk "NR>4" ; sleep 900 ; clear ; done; ' Enter
+send-keys -t "3" C-z 'while true; do meteo USMA0046 ; cat /tmp/conky_meteo.txt ; sleep 900 ; clear ; done;' Enter
